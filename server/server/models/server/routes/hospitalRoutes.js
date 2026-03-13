@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 const hospitals = [
   {
     name: "City Care Hospital",
@@ -20,7 +21,6 @@ const hospitals = [
     ]
   }
 ];
-
 router.get("/hospitals", (req, res) => {
   res.json(hospitals);
 });
