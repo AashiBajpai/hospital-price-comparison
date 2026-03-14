@@ -4,10 +4,11 @@
   <title>Hospital Price Comparison</title>
 </head>
 <body>
-<h1>Hospital Service Price Comparison</h1>
 
-<input id="searchInput" placeholder="Search service (X-ray, MRI)">
+<h1>Hospital Service Price Comparison</h1>
+<input id="searchInput" placeholder="Search service (X-ray)">
 <button onclick="searchService()">Search</button>
+
 <ul id="results"></ul>
 
 <script>
@@ -19,9 +20,7 @@ const hospitals = [
 function searchService(){
   const input = document.getElementById("searchInput").value.toLowerCase();
   const results = document.getElementById("results");
-
   results.innerHTML = "";
-
   hospitals.forEach(h => {
     if(h.service.toLowerCase().includes(input)){
       const li = document.createElement("li");
@@ -30,7 +29,7 @@ function searchService(){
     }
   });
 }
-
 </script>
+
 </body>
 </html>
